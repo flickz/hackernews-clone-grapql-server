@@ -1,0 +1,10 @@
+#endpoint: ''
+#endpoint: ''
+endpoint: https://eu1.prisma.sh/oluwaseun-omoyajowo-e3a2b9/hackernews/dev
+datamodel: datamodel.prisma
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client
+hooks:
+  post-deploy:
+    - prisma generate
